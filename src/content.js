@@ -15,7 +15,11 @@ const loadLogic = (function () {
     const aboutButton = document.querySelector("#about");
     const body = document.querySelector("body");
 
-    homeButton.addEventListener("click", () => {
+    //call homeClick to set first page upon load as home:
+    homeClick();
+
+    //homeButton functionality:
+    function homeClick() {
         body.removeChild(contentDiv);
         contentDiv = document.createElement("div");
         contentDiv.style.height = "88%";
@@ -25,8 +29,8 @@ const loadLogic = (function () {
         const luxChocImg = document.createElement("img");
         luxChocImg.src = image;
         luxChocImg.style.display = "";
-         luxChocImg.style.height = "100%";
-         luxChocImg.style.width = "100%";
+        luxChocImg.style.height = "100%";
+        luxChocImg.style.width = "100%";
         luxChocImg.style.objectFit = "cover";
         luxChocImg.style.position = "absolute";
         luxChocImg.style.zIndex = "-1";
@@ -74,7 +78,9 @@ const loadLogic = (function () {
 
         //undesirable sticky header fix:
         body.style.height = "100vh";
-    });
+    }
+
+    homeButton.addEventListener("click", homeClick);
 
     menuButton.addEventListener("click", () => {
         body.removeChild(contentDiv);
@@ -208,37 +214,65 @@ const loadLogic = (function () {
         contentDiv = document.createElement("div");
 
         contentDiv.style.display = "flex";
+        contentDiv.style.flexDirection = "column";
         contentDiv.style.alignItems = "center";
         contentDiv.style.justifyContent = "center";
         contentDiv.style.marginTop = "5rem";
+        contentDiv.style.color = "gold";
 
         //homeDiv properties:
         const homeDiv = document.createElement("div");
         homeDiv.style.width = "75%";
-        homeDiv.style.border = "5px solid gold";
+        homeDiv.style.border = "2px solid gold";
+        homeDiv.style.padding = "10px";
         homeDiv.style.borderRadius = "15px";
-        homeDiv.textContent = "HOME";
+        homeDiv.textContent = "ABOUT";
+        homeDiv.style.fontSize = "xx-large";
+        homeDiv.style.fontWeight = "900";
+        homeDiv.style.color = "gold";
         homeDiv.style.textAlign = "center";
 
         //homeDivContentSection properties:
         const homeDivContentSection = document.createElement("div");
-        homeDivContentSection.style.display = "grid";
-        homeDivContentSection.style.gridTemplateColumns = "3fr 1fr";
-        homeDivContentSection.style.justifyContent = "center";
-        homeDivContentSection.style.alignItems = "center";
+        // homeDivContentSection.style.display = "grid";
+        // homeDivContentSection.style.gridTemplateColumns = "3fr 1fr";
+        // homeDivContentSection.style.justifyContent = "center";
+        // homeDivContentSection.style.alignItems = "center";
 
         //para properties:
         const para = document.createElement("p");
-        para.style.color = "white";
-        para.textContent = "Hailing from the upper west side of the neighborhood comes your favorite restaurant by the name of DeLuxe Desire. Your one-stop shop of eating, baking, chocolates and all things savory. Come join us for a meal. You will NOT regret it!"
-        para.style.textAlign = "left";
-        para.style.fontWeight = "900";
-        para.style.padding = "10px";
+        para.id = "about-para";
+        para.textContent = "Hailing from the upper west side of the neighborhood comes your favorite restaurant by the name of DeLuxe Desire. Your one-stop shop containing eatery, bakery, and all things chocolatey. Come sign your life away to us for a meal. You will NOT regret it!"
 
         homeDivContentSection.appendChild(para);
         homeDiv.appendChild(homeDivContentSection);
 
-        contentDiv.appendChild(homeDiv);
+        //storeHoursDiv:
+        const storeHours = document.createElement("div");
+        storeHours.id = "store-hours";
+        //storeHoursh1 properties:
+        const storeHoursh1 = document.createElement("h1");
+        storeHoursh1.textContent = "Store hours";
+        storeHoursh1.style.marginTop = "5rem";
+        storeHoursh1.textAlign = "center";
+        const mondayDiv = document.createElement("div");
+        mondayDiv.textContent = "Monday: 3 a.m. - 3:30 a.m.";
+        const tuesdayDiv = document.createElement("div");
+        tuesdayDiv.textContent = "Tuesday: 9 a.m. - 5 p.m.";
+        const wednesdayDiv = document.createElement("div");
+        wednesdayDiv.textContent = "Wednesday: 2 p.m. - 10 p.m.";
+        const thursdayDiv = document.createElement("div");
+        thursdayDiv.textContent = "Thursday: 5 p.m. - 5 a.m.";
+        const fridayDiv = document.createElement("div");
+        fridayDiv.textContent = "Friday: Open 24/7";
+        const saturdayDiv = document.createElement("div");
+        saturdayDiv.textContent = "Saturday: Closed all day";
+        const sundayDiv = document.createElement("div");
+        sundayDiv.textContent = "Sunday: 3:33 a.m. - 6:66 p.m.";
+
+        storeHours.append(storeHoursh1, mondayDiv, tuesdayDiv, wednesdayDiv, thursdayDiv, fridayDiv, saturdayDiv, sundayDiv);
+
+        contentDiv.append(homeDiv, storeHours);
 
         body.append(contentDiv);
 
