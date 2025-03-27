@@ -11,7 +11,7 @@ const loadLogic = (function () {
     homeButton.addEventListener("click", () => {
         body.removeChild(contentDiv);
         contentDiv = document.createElement("div");
-        contentDiv.style.height = "85%";
+        contentDiv.style.height = "88%";
         contentDiv.style.position = "relative";
 
         //image properties:
@@ -23,7 +23,7 @@ const loadLogic = (function () {
         luxChocImg.style.objectFit = "cover";
         luxChocImg.style.position = "absolute";
         luxChocImg.style.zIndex = "-1";
-        luxChocImg.style.opacity = "0.8";
+        luxChocImg.style.opacity = "0.6";
 
         //text properties:
         const textDiv1 = document.createElement("div");
@@ -37,21 +37,29 @@ const loadLogic = (function () {
         textDiv2.textContent = "Crisp."
         textDiv2.style.fontWeight = "900";
         textDiv2.style.fontSize = "5rem";
-        textDiv2.style.top = "35%";
+        textDiv2.style.top = "25%";
         textDiv2.style.right = "25%";
         const textDiv3 = document.createElement("div");
         textDiv3.style.position = "absolute";
         textDiv3.textContent = "Delicioso!";
         textDiv3.style.fontWeight = "900";
         textDiv3.style.fontSize = "5rem";
-        textDiv3.style.top = "65%"
+        textDiv3.style.top = "55%"
         textDiv3.style.right = "40%";
+
+        //order button:
+        const order = document.createElement("button");
+        order.style.position = "absolute";
+        order.textContent = "PLACE ORDER";
+        order.style.top = "85%";
+        order.style.right = "41%";
+        order.style.fontSize = "xxx-large";
         
-
-
+        
         contentDiv.appendChild(textDiv1);
         contentDiv.appendChild(textDiv2);
         contentDiv.appendChild(textDiv3);
+        contentDiv.appendChild(order);
         contentDiv.appendChild(luxChocImg);
 
 
