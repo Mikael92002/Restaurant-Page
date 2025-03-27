@@ -11,6 +11,12 @@ const loadLogic = (function () {
         body.removeChild(contentDiv);
         contentDiv = document.createElement("div");
         contentDiv.textContent = "hello motophiles";
+        const homeDiv = document.createElement("div");
+        const para = document.createElement("p");
+        homeDiv.style.border = "5px solid gold";
+        homeDiv.style.borderRadius = "15px";
+        para.style.color = "gold"
+        para.textContent = "Hailing from the upper west side of the continent comes a great restaurant by the name of DeLuxe Desire. Your one-stop shop of eating, baking, chocolates and all things savory. Come join us for a meal. You will NOT regret it!"
         body.appendChild(contentDiv);
     });
 

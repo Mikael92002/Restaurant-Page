@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Gidole&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap');
 
 body {
     background-color: black;
@@ -13,7 +14,7 @@ button {
     display: flex;
     flex: 1 1 0;
     justify-content: center;
-    background-color: gold;
+    background-color:gold;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: 900;
     font-size: larger;
@@ -24,6 +25,7 @@ button {
     border-right: 2px solid black;
     border-left: 2px solid black;
     white-space: nowrap;
+    border-radius: 10px;
     transition:0.2s;
 }
 
@@ -37,8 +39,9 @@ button:active{
 }
 
 header {
-    background-color: rgb(228, 228, 228);
-    padding: 1px;
+    background-color: black;
+    padding: 5px;
+    margin: 0px 1.1rem;
 }
 
 nav {
@@ -49,23 +52,23 @@ nav {
 }
 
 #title {
-    display: flex;
-    font-family: "Dancing Script", cursive, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: "Dancing Script", serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-optical-sizing: auto;
-    font-weight: 100;
+    font-weight: 900;
     font-style: normal;
     font-size: 3rem;
-    background-image: linear-gradient(gold, gold, gold, rgb(175, 174, 174), rgb(175, 175, 175));
-    color: transparent;
-    background-clip: text;
-    margin:20px;
-    justify-content: flex-start;
-}
-#title-container{
+    color: rgb(0, 0, 0);
+    margin:5px 0px;
+    text-align: center;
     text-decoration: underline;
-    color: gold;
-    text-decoration-thickness: 1px;
+    text-decoration-thickness: 2px;
+    text-decoration-color: black;
+    user-select: none;
+    background: rgb(0, 0, 0);
+    background-color: rgb(255, 217, 0);   
+    border: 4px dashed black;
 }
+
 
 .dancing-script-title-font {
     font-family: "Dancing Script", cursive;
