@@ -1,4 +1,11 @@
 import image from "./luxuryChocolatePic.jpg";
+import caramelChoc from "./menu1img.jpg";
+import shake from "./menu2img.jpg";
+import beeseChurger from "./menu3img.jpg";
+import snowman from "./menu4img.jpg";
+import kokoLatte from "./menu5img.jpg";
+import chocFish from "./menu6img.jpg";
+import proteinBite from "./menu7img.jpg";
 
 //Wrap the the page load logic in to one IIFE:
 const loadLogic = (function () {
@@ -18,8 +25,8 @@ const loadLogic = (function () {
         const luxChocImg = document.createElement("img");
         luxChocImg.src = image;
         luxChocImg.style.display = "";
-        luxChocImg.style.height = "100%";
-        luxChocImg.style.width = "100%";
+         luxChocImg.style.height = "100%";
+         luxChocImg.style.width = "100%";
         luxChocImg.style.objectFit = "cover";
         luxChocImg.style.position = "absolute";
         luxChocImg.style.zIndex = "-1";
@@ -38,7 +45,7 @@ const loadLogic = (function () {
         textDiv2.style.fontWeight = "900";
         textDiv2.style.fontSize = "5rem";
         textDiv2.style.top = "25%";
-        textDiv2.style.right = "25%";
+        textDiv2.style.right = "15%";
         const textDiv3 = document.createElement("div");
         textDiv3.style.position = "absolute";
         textDiv3.textContent = "Delicioso!";
@@ -54,8 +61,8 @@ const loadLogic = (function () {
         order.style.top = "85%";
         order.style.right = "41%";
         order.style.fontSize = "xxx-large";
-        
-        
+
+
         contentDiv.appendChild(textDiv1);
         contentDiv.appendChild(textDiv2);
         contentDiv.appendChild(textDiv3);
@@ -64,13 +71,136 @@ const loadLogic = (function () {
 
 
         body.appendChild(contentDiv);
+
+        //undesirable sticky header fix:
+        body.style.height = "100vh";
     });
 
     menuButton.addEventListener("click", () => {
         body.removeChild(contentDiv);
+
+        //contentDiv properties:
         contentDiv = document.createElement("div");
 
+        //pickup/delivery buttons:
+        const buttonContainerDiv = document.createElement("div");
+        buttonContainerDiv.style.display = "flex";
+        buttonContainerDiv.style.marginLeft = "1rem";
+        buttonContainerDiv.style.marginTop = "4rem"
+        const pickupButton = document.createElement("button");
+        const deliveryButton = document.createElement("button");
+        pickupButton.textContent = "Pick-up";
+        pickupButton.style.color = "white";
+        pickupButton.style.backgroundColor = "black";
+        pickupButton.style.border = "1px solid gold";
+        deliveryButton.textContent = "Delivery";
+        deliveryButton.style.color = "white";
+        deliveryButton.style.backgroundColor = "black";
+        deliveryButton.style.border = "1px solid gold";
+        pickupButton.addEventListener("click", () => {
+            pickupButton.style.backgroundColor = "gold";
+            deliveryButton.style.backgroundColor = "black";
+        });
+        deliveryButton.addEventListener("click", () => {
+            pickupButton.style.backgroundColor = "black";
+            deliveryButton.style.backgroundColor = "gold";
+        })
+        //menu items:
+        const menuGridDiv = document.createElement("div");
+        const menu1 = document.createElement("div");
+        const menu2 = document.createElement("div");
+        const menu3 = document.createElement("div");
+        const menu4 = document.createElement("div");
+        const menu5 = document.createElement("div");
+        const menu6 = document.createElement("div");
+        const menu7 = document.createElement("div");
+        menuGridDiv.append(menu1, menu2, menu3, menu4, menu5, menu6, menu7);
+        menuGridDiv.style.display = "grid";
+        menuGridDiv.style.gridTemplateColumns = "repeat(auto-fit, minmax(200px, 400px))"
+        menuGridDiv.style.justifyContent = "space-evenly";
+        menuGridDiv.style.rowGap = "100px";
+        menuGridDiv.style.marginTop = "2rem";
+        menuGridDiv.style.marginBottom = "2rem";
+
+        for (let i = 0; i < menuGridDiv.children.length; i++) {
+
+            //menu content:
+            const titleOfFoodDiv = document.createElement("div");
+            titleOfFoodDiv.id = "food-title";
+            const menuContent = document.createElement("div");
+            menuContent.style.display = "grid";
+            menuContent.style.gridTemplateColumns = "2fr 1fr";
+            menuContent.style.gap = "5px";
+            const menuContentPara = document.createElement("p");
+            menuContentPara.id = "food-para";
+            const menuImg = document.createElement("img");
+            menuImg.id = "food-img";
+            menuContent.append(menuContentPara, menuImg);
+
+            const priceButton = document.createElement("button");
+            priceButton.id = "price-button";
+            const priceButtonDivContainer = document.createElement("div");
+            priceButtonDivContainer.id = "price-div-container";
+            priceButtonDivContainer.append(priceButton);
+            menuGridDiv.children[i].append(titleOfFoodDiv, menuContent, priceButtonDivContainer);
+
+            //menu-item container:
+            menuGridDiv.children[i].id = "menu-item";
+            console.log(menuGridDiv.children[i]);
+        }
+        //to access menuContent: menu1.children[1];
+        //to access menuContentPara: menu1.children[1].children[0];
+        //to access menuImg:menu1.children[1].children[1];
+        //to access priceButton: menu1.children[2].children[0];
+
+        //tiresome work:
+        menu1.children[0].textContent = "Caramel Chocolate";
+        menu1.children[1].children[0].textContent = "Let the taste of this gooey ahh rich chocolate melt in your mouth and absorb you whole as every fiber of your being transcends the space-time continuum the moment your mortal tongue touches this exotic treat."
+        menu1.children[1].children[1].src = caramelChoc;
+        menu1.children[2].children[0].textContent = "$7.99";
+
+        menu2.children[0].textContent = "Shake Ya Booty"
+        menu2.children[1].children[0].textContent = "A black black BLACK chocolate shake with all the fixings such as drizzle, fizzle, and pickle. If you throw up while drinking, please clean up after yourself."
+        menu2.children[1].children[1].src = shake;
+        menu2.children[2].children[0].textContent = "$3.99";
+
+        menu3.children[0].textContent = "BeeseChurger";
+        menu3.children[1].children[0].textContent = "Our signature dish, the BeeseChurger\u2122, is the most stuffed, packed, and delicious abomination you will ever taste! Features melted cheesecake chocolate, chocolate goo, fried chocolate, chocolate stuffing, chocolate parmesan, and Chocolate-y chocolate. If you get a heart attack, please call an ambulance by yourself."
+        menu3.children[1].children[1].src = beeseChurger;
+        menu3.children[2].children[0].textContent = "$15.99";
+
+        menu4.children[0].textContent = "Chocolate Snowman";
+        menu4.children[1].children[0].textContent = "Who needs coke (cocaine) when you've got the Chocolate Snowman? This addictive drink makes you a choc-a-holic. Contains trace amount of uranium. Say ya prayers cuz you're goin' on a trip that you've never gone on before, baby darling!"
+        menu4.children[1].children[1].src = snowman;
+        menu4.children[2].children[0].textContent = "$3.99";
+
+        menu5.children[0].textContent = "Holy Koko-Latte"
+        menu5.children[1].children[0].textContent = "Dear heavenly father, forgive me for I have sinned. By indulging in your wordly creation, the Holy Koko-Latte, I deserve a punishment no less than death-by-chocolate shot. Pull the trigger on this chocolate sinner, honey."
+        menu5.children[1].children[1].src = kokoLatte;
+        menu5.children[2].children[0].textContent = "$49.99";
+
+        menu6.children[0].textContent = "ChocFish"
+        menu6.children[1].children[0].textContent = "Originating from little Tokyo comes the star of the menu. The ChocFish is considered a delicacy by the ancient Tibetan people, all of whom are now extinct. The ChocFish is crispy, yet hard. Smooth yet rough. Fishy yet reptilian. Taste it for yourself to see what you've been missing out on!";
+        menu6.children[1].children[1].src = chocFish;
+        menu6.children[2].children[0].textContent = "$9.99";
+
+        menu7.children[0].textContent = "Protein Bite"
+        menu7.children[1].children[0].textContent = "This is for all my gymanese folk out there. Contains 500g of protein. You'll NEVER care about your protein intake EVER again. A single bite of this nutrient-filled dish, and you'll be hitting some choc curls for the gurls in no time. So what are you waiting for? Not for a 225 bench, I hope. Hit that order button now!"
+        menu7.children[1].children[1].src = proteinBite;
+        menu7.children[2].children[0].textContent = "$5.99";
+
+
+
+        //pickup/delivery button appending:
+        buttonContainerDiv.appendChild(pickupButton);
+        buttonContainerDiv.appendChild(deliveryButton);
+        contentDiv.appendChild(buttonContainerDiv);
+        contentDiv.appendChild(menuGridDiv);
         body.appendChild(contentDiv);
+
+        //undesirable sticky header fix:
+        body.style.minHeight = "100vh";
+        body.style.height = "auto";
     });
 
     aboutButton.addEventListener("click", () => {
@@ -111,6 +241,10 @@ const loadLogic = (function () {
         contentDiv.appendChild(homeDiv);
 
         body.append(contentDiv);
+
+        //undesirable sticky header fix:
+        body.style.minHeight = "100vh";
+        body.style.height = "auto";
     });
 
 })();

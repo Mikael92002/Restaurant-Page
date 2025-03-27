@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Gidole&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Gidole&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 body {
     background-color: black;
@@ -6,10 +6,10 @@ body {
     padding: 0;
     color: white;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    height: 100vh;
+    height:100vh;
 }
 
-#slogan{
+#slogan {
     display: flex;
     align-items: end;
     margin-left: 10px;
@@ -20,10 +20,10 @@ body {
     font-weight: 300;
     font-style: normal;
     font-variation-settings:
-      "wdth" 100;
+        "wdth" 100;
 }
 
-#appearing-logo{
+#appearing-logo {
     display: flex;
     align-items: center;
     font-family: "Dancing Script", serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -31,20 +31,22 @@ body {
     font-weight: 900;
     font-style: normal;
     font-size: 2rem;
-    color:gold;
+    color: gold;
     text-decoration: underline;
     text-decoration-thickness: 2px;
     text-decoration-color: black;
     transition: 0.5s;
-    user-select:none;
+    user-select: none;
     margin-left: 5px;
     cursor: pointer;
 }
-#appearing-logo:hover{
-color:black;
+
+#appearing-logo:hover {
+    color: black;
 }
-#appearing-logo:active{
-    color:black;
+
+#appearing-logo:active {
+    color: black;
 }
 
 button {
@@ -52,7 +54,7 @@ button {
     display: flex;
     flex: 0 1 0;
     justify-content: center;
-    background-color:gold;
+    background-color: gold;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: 900;
     font-size: larger;
@@ -63,22 +65,23 @@ button {
     border-right: 2px solid black;
     border-left: 2px solid black;
     white-space: nowrap;
-    transition:0.2s;
+    transition: 0.2s;
 }
 
-button:hover{
+button:hover {
     transform: scale(1.06);
     size: 20px;
     cursor: pointer;
 }
-button:active{
+
+button:active {
     background-color: rgb(105, 89, 0);
-    transition:0.3s;
+    transition: 0.3s;
 }
 
 header {
     position: sticky;
-    top:0px;
+    top: 0px;
     display: flex;
     background-color: black;
     background-color: gold;
@@ -99,21 +102,55 @@ nav {
     font-style: normal;
     font-size: 3rem;
     color: rgb(0, 0, 0);
-    margin:5px 0px;
+    margin: 5px 0px;
     text-align: center;
     text-decoration: underline;
     text-decoration-thickness: 2px;
     text-decoration-color: black;
     user-select: none;
     background: rgb(0, 0, 0);
-    background-color: rgb(255, 217, 0);   
+    background-color: rgb(255, 217, 0);
     border: 4px dashed black;
 }
-
 
 .dancing-script-title-font {
     font-family: "Dancing Script", cursive;
     font-optical-sizing: auto;
     font-weight: 900;
     font-style: normal;
+}
+
+#menu-item {
+    border: 1px solid gold;
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+#food-title {
+    font-weight: 900;
+    font-family: "Oswald", sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#food-para {
+    text-align: left;
+    font-family: "Noto Serif", serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 300;
+}
+
+#food-img {
+    justify-self: center;
+    align-self: center;
+    width: 100%;
+    height: auto;
+}
+
+#price-div-container {
+    display: flex;
+    flex-direction: column;
+    flex:1;
+    align-items: start;
+    justify-content: end;
 }
