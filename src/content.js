@@ -42,13 +42,17 @@ const loadLogic = (function () {
         textDiv1.textContent = "Fresh.";
         textDiv1.style.fontWeight = "900";
         textDiv1.style.fontSize = "5rem";
+        textDiv1.style.top = "10%";
+        textDiv1.style.transform = "translateY(-50%)";
+        textDiv1.style.left = "15%";
         const textDiv2 = document.createElement("div");
         textDiv2.style.position = "absolute";
         textDiv2.textContent = "Crisp."
         textDiv2.style.fontWeight = "900";
         textDiv2.style.fontSize = "5rem";
-        textDiv2.style.top = "25%";
-        textDiv2.style.right = "0%";
+        textDiv2.style.top = "30%";
+        textDiv2.style.right = "25%";
+        textDiv2.style.transform = "translateY(-50%)";
         const textDiv3 = document.createElement("div");
         textDiv3.style.position = "absolute";
         textDiv3.textContent = "Delicioso!";
@@ -61,6 +65,7 @@ const loadLogic = (function () {
         const order = document.createElement("button");
         order.style.position = "absolute";
         order.textContent = "PLACE ORDER";
+        order.id = "place-order-button";
         order.style.top = "85%";
         order.style.left = "50%";
         order.style.transform = "translate(-50%,-50%)";
@@ -152,7 +157,6 @@ const loadLogic = (function () {
 
             //menu-item container:
             menuGridDiv.children[i].id = "menu-item";
-            console.log(menuGridDiv.children[i]);
         }
         //to access menuContent: menu1.children[1];
         //to access menuContentPara: menu1.children[1].children[0];
