@@ -86,6 +86,7 @@ header {
     background-color: black;
     background-color: gold;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 nav {
