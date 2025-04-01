@@ -165,37 +165,37 @@ const loadLogic = (function () {
 
         //tiresome work:
         menu1.children[0].textContent = "Caramel Chocolate";
-        menu1.children[1].children[0].textContent = "Let the taste of this gooey ahh rich chocolate melt in your mouth and absorb you whole as every fiber of your being transcends the space-time continuum the moment your mortal tongue touches this exotic treat."
+        menu1.children[1].children[0].textContent = "Let the taste of this rich chocolate melt in your mouth and absorb you whole as every fiber of your being transcends the space-time continuum the moment your mortal tongue touches this exotic treat."
         menu1.children[1].children[1].src = caramelChoc;
         menu1.children[2].children[0].textContent = "$7.99";
 
-        menu2.children[0].textContent = "Shake Ya Booty"
-        menu2.children[1].children[0].textContent = "A black black BLACK chocolate shake with all the fixings such as drizzle, fizzle, and pickle. If you throw up while drinking, please clean up after yourself."
+        menu2.children[0].textContent = "Choco-Shake"
+        menu2.children[1].children[0].textContent = "A tasty refreshment perfect to cure a mysterious sickness or a nasty headache. With bits and pieces of chocolate and macadamia scattered throughout, you'll be wanting the bottom of this drink to be endless."
         menu2.children[1].children[1].src = shake;
         menu2.children[2].children[0].textContent = "$3.99";
 
         menu3.children[0].textContent = "BeeseChurger";
-        menu3.children[1].children[0].textContent = "Our signature dish, the BeeseChurger\u2122, is the most stuffed, packed, and delicious abomination you will ever taste! Features melted cheesecake chocolate, chocolate goo, fried chocolate, chocolate stuffing, chocolate parmesan, and Chocolate-y chocolate. If you get a heart attack, please call an ambulance by yourself."
+        menu3.children[1].children[0].textContent = "Our signature dish, the BeeseChurger\u2122, is the most stuffed, packed, and delicious abomination you will ever taste! Features melted cheesecake chocolate, chocolate drizzle, fried chocolate, chocolate stuffing, chocolate parmesan, and Chocolate-y chocolate."
         menu3.children[1].children[1].src = beeseChurger;
         menu3.children[2].children[0].textContent = "$15.99";
 
         menu4.children[0].textContent = "Chocolate Snowman";
-        menu4.children[1].children[0].textContent = "Who needs coke (cocaine) when you've got the Chocolate Snowman? This addictive drink makes you a choc-a-holic. Contains trace amount of uranium. Say ya prayers cuz you're goin' on a trip that you've never gone on before, baby darling!"
+        menu4.children[1].children[0].textContent = "Who needs water when you've got the Chocolate Snowman? This addictive drink makes you a choc-a-holic! Featuring A three-layer solution to the age old problem of not having enough flavor in shakes. Contains trace amount of peanuts."
         menu4.children[1].children[1].src = snowman;
         menu4.children[2].children[0].textContent = "$3.99";
 
         menu5.children[0].textContent = "Holy Koko-Latte"
-        menu5.children[1].children[0].textContent = "Dear heavenly father, forgive me for I have sinned. By indulging in your wordly creation, the Holy Koko-Latte, I deserve a punishment no less than death-by-chocolate shot. Pull the trigger on this chocolate sinner, honey."
+        menu5.children[1].children[0].textContent = "Tasting the assortment of treats present in the Holy Koko-Latte will leave you PRAYING for more! There is nothing finer than a hand-picked selection of our world-famous chocolates, all available in a carefully curated and divine package."
         menu5.children[1].children[1].src = kokoLatte;
         menu5.children[2].children[0].textContent = "$49.99";
 
         menu6.children[0].textContent = "ChocFish"
-        menu6.children[1].children[0].textContent = "Originating from little Tokyo comes the star of the menu. The ChocFish is considered a delicacy by the ancient Tibetan people, all of whom are now extinct. The ChocFish is crispy, yet hard. Smooth yet rough. Fishy yet reptilian. Taste it for yourself to see what you've been missing out on!";
+        menu6.children[1].children[0].textContent = "Originating from little Tokyo comes the star of the menu. The ChocFish is considered a delicacy by the ancient Tibetan people. The ChocFish is crispy, yet hard. Smooth yet rough. Fishy yet reptilian. Taste it for yourself to see what you've been missing out on!";
         menu6.children[1].children[1].src = chocFish;
         menu6.children[2].children[0].textContent = "$9.99";
 
         menu7.children[0].textContent = "Protein Bite"
-        menu7.children[1].children[0].textContent = "This is for all my gymanese folk out there. Contains 500g of protein. You'll NEVER care about your protein intake EVER again. A single bite of this nutrient-filled dish, and you'll be hitting some choc curls for the gurls in no time. So what are you waiting for? Not for a 225 bench, I hope. Hit that order button now!"
+        menu7.children[1].children[0].textContent = "This special treat is for all the gym folk out there. Contains 500g of protein. You'll NEVER care about your protein intake EVER again. A single bite of this nutrient-filled dish, and you'll be hitting the gym everyday with unlimited strength. Consume now to get the full benefits!";
         menu7.children[1].children[1].src = proteinBite;
         menu7.children[2].children[0].textContent = "$5.99";
 
