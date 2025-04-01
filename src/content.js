@@ -158,6 +158,7 @@ const loadLogic = (function () {
             //menu-item container:
             menuGridDiv.children[i].id = "menu-item";
         }
+        
         //to access menuContent: menu1.children[1];
         //to access menuContentPara: menu1.children[1].children[0];
         //to access menuImg:menu1.children[1].children[1];
