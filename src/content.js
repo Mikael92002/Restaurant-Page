@@ -260,19 +260,19 @@ const loadLogic = (function () {
         storeHoursh1.style.marginTop = "5rem";
         storeHoursh1.textAlign = "center";
         const mondayDiv = document.createElement("div");
-        mondayDiv.textContent = "Monday: 3 a.m. - 3:30 a.m.";
+        mondayDiv.textContent = "Monday: 3 a.m. - 3 p.m.";
         const tuesdayDiv = document.createElement("div");
         tuesdayDiv.textContent = "Tuesday: 9 a.m. - 5 p.m.";
         const wednesdayDiv = document.createElement("div");
-        wednesdayDiv.textContent = "Wednesday: 2 p.m. - 10 p.m.";
+        wednesdayDiv.textContent = "Wednesday: 9 a.m. - 5 p.m.";
         const thursdayDiv = document.createElement("div");
-        thursdayDiv.textContent = "Thursday: 5 p.m. - 5 a.m.";
+        thursdayDiv.textContent = "Thursday: 9 a.m. - 5 p.m.";
         const fridayDiv = document.createElement("div");
         fridayDiv.textContent = "Friday: Open 24/7";
         const saturdayDiv = document.createElement("div");
         saturdayDiv.textContent = "Saturday: Closed all day";
         const sundayDiv = document.createElement("div");
-        sundayDiv.textContent = "Sunday: 3:33 a.m. - 6:66 p.m.";
+        sundayDiv.textContent = "Sunday: 9 a.m. - 2 p.m.";
 
         storeHours.append(storeHoursh1, mondayDiv, tuesdayDiv, wednesdayDiv, thursdayDiv, fridayDiv, saturdayDiv, sundayDiv);
 
